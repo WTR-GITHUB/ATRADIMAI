@@ -1,0 +1,19 @@
+# Python
+*.pyc
+__pycache__/
+
+# Virtual Environment
+atr/
+
+# Django
+.env
+db.sqlite3
+media/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+CRM-A.session.sql
