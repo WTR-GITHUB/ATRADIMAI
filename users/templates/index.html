@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Vartotojų sąrašas{% endblock title %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Vartotojų sąrašas</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>El. paštas</th>
+                <th>Vardas</th>
+                <th>Pavardė</th>
+                <th>Gimimo data</th>
+                <th>Grupė</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.surname }}</td>
+                <td>{{ user.birth_day }}</td>
+                <td>{{ user.group }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
